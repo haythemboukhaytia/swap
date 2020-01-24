@@ -1,0 +1,14 @@
+.container-fluid{
+background-color: black;
+}
+h2{
+    color:red;
+    font-weight: bolder;
+}
+p{
+    color:white;
+    font-weight: 600;
+}
+span{
+    color:grey;
+}

@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-12 mt-5">
+            <table class="table table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">name</th>
+                        <th scope="col">gender</th>
+                        <th scope="col">homeworld</th>
+                        <th scope="col">films</th>
+                        <th scope="col">species</th>
+                        <th scope="col">vehicles</th>
+                        <!-- <th scope="col">starships</th> -->
+                        <!-- <th scope="col">created</th>
+                        <th scope="col">edited</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let swap of allswap.results">
+                        <th scope="row">{{swap.name}}</th>
+                        <td>{{swap.gender}}</td>
+
+                        <td><button class="btn btn-warning">{{swap.homeworld}}</button></td>
+
+
+                        <td>
+                            <ul *ngFor="let item of swap.films">
+                                <li><button class="btn btn-primary" (click)="onClickFilm(item)">{{item}}</button></li>
+                            </ul>
+                        </td>
+
+                        <td>
+                            <ul *ngFor="let items of swap.species">
+                                <li><button class="btn btn-success">{{items}}</button></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul *ngFor="let item of swap.vehicles">
+                                <li><button class="btn btn-warning" (click)="onclickVehicle(item)">{{item}}</button>
+                                </li>
+                            </ul>
+                        </td>
+                        <!-- <td>
+                            <ul *ngFor="let item of swap.starships">
+                                <li><button class="btn btn-danger">{{item}}</button></li>
+                            </ul>
+                        </td>
+                        <td>{{swap.created}}</td>
+                        <td>{{swap.edited}}</td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
